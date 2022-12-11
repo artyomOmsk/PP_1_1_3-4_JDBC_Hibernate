@@ -12,14 +12,6 @@ import java.sql.SQLException;
 
 public class Util {
 
-    public static void main(String[] args) {
-        Session session = getSessionFactory().openSession();
-        session.beginTransaction();
-        User user = new User("Artyom", "Lyamin", (byte) 21);
-        session.save(user);
-        session.getTransaction().commit();
-        session.close();
-    }
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/mydb";
